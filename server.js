@@ -16,7 +16,7 @@ app.use("/public", express.static("public"));
 
 const MongoClient = require("mongodb").MongoClient;
 const CLIENTKEY = "mongodb+srv://whdtjtjwhd9012:whdtjtjwhd9012@cluster0.3pcskg4.mongodb.net/?retryWrites=true&w=majority"
-const PORT = 80;
+const PORT = process.env.PORT;
 var db;
 
 MongoClient.connect(CLIENTKEY, { useUnifiedTopology: true }, function (err, client) {
